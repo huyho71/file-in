@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #20356A;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thông tin in</h1>
+    <!-- Hiển thị dữ liệu ở đây -->
+    <div id="data">
+        <!-- Dữ liệu in sẽ được hiển thị ở đây dựa trên tham số ID -->
+    </div>
+    <button class="print-button" onclick="window.print()">In</button>
+
+    <script>
+        // Lấy tham số từ URL và hiển thị dữ liệu
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        document.getElementById('data').innerText = 'Dữ liệu cho ID: ' + id;
+
+        // Fetch thêm thông tin từ server hoặc API nếu cần thiết
+    </script>
+</body>
+</html>
